@@ -3,6 +3,13 @@ function st_standard() {
 	//log(weapons[eqwp]);
 	weapons[eqwp].step(attack);
 	
+	if !lock.hold {
+		if left.hold dir = 180;
+		if right.hold dir = 0;
+		if down.hold dir = 270;
+		if up.hold dir = 90;
+	}
+	
 	if debug.hit {
 		textbox_create(txt_test);
 	}

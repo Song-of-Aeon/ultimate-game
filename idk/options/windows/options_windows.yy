@@ -1,8 +1,8 @@
 {
-  "option_windows_display_name": "islandgame",
+  "option_windows_display_name": "other-type game",
   "option_windows_executable_name": "${project_name}.exe",
   "option_windows_version": "1.1.1.1",
-  "option_windows_company_info": "FIRELAND",
+  "option_windows_company_info": "us",
   "option_windows_product_info": "this",
   "option_windows_copyright_info": "me",
   "option_windows_description_info": "game",

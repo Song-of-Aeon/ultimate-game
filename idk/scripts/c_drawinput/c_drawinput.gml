@@ -10,6 +10,8 @@ function c_drawinput() {
 	draw_sprite(s_inputdisplay, 6+left.hold, xdraw-32, ydraw+16);
 	draw_sprite(s_inputdisplay, 12+attack.hold, xdraw+32, ydraw-16);
 	draw_sprite(s_inputdisplay, 10+right.hold, xdraw+32, ydraw+16);
+	var dude = distabs(dir, 16);
+	draw_arrow(x, y-16, x+dude.x, y+dude.y-16, 3);
 	
 	draw_circle(mouse_x, mouse_y, 4, true);
 }

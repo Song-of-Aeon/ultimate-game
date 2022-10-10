@@ -1,4 +1,5 @@
 count = 0;
+dir = 0;
 
 spd = {
 	h: 0,
