@@ -32,3 +32,8 @@ if jump.hold {
 		instance_destroy(dude);
 	}
 }
+
+if lock.hit {
+	c_saveroom("shitter");
+	log("did it");
+}
