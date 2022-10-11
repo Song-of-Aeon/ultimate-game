@@ -16,11 +16,11 @@ if selectedtype != 1 {
 	if attack.hit {
 		//mydude = instance_create(mouse_x, mouse_y, o_trigger);
 		mydude = c_maketrigger(mouse_x, mouse_y, mouse_x, mouse_y);
-		mydude.target = mp[datas[selectedtype][selecteddata]];
-		c_tilequantize(mydude);
+		mydude.target = mp[datas[selectedtype][selecteddata]].maproom;
+		c_tilequantize(mydude, -8, -8);
 	}
 	if attack.hold {
-		mydude.x2 = c_tilequantizeval(mouse_x);
+		mydude.x2 = c_tilequantizeval(mouse_x, -8, -8);
 		mydude.y2 = c_tilequantizeval(mouse_y);
 	}
 }

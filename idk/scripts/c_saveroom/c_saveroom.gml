@@ -1,5 +1,6 @@
 function c_saveroom(name) {
 	global.doingguys = 0;
+	global.thename = name;
 	log("we go");
 	var dude = file_text_open_write(name + ".yy");
 	log("we GO");
@@ -10,9 +11,13 @@ function c_saveroom(name) {
 	with all {
 		if object_index != o_mapper {
 			var oname = object_get_name(object_index);
-			myname = "myman"+st(global.doingguys);
+			myname = global.thename+st(global.doingguys);
 			global.doingguys++;
-			file_text_write_string(dude, "{\"properties\":[],\"isDnd\":false,\"objectId\":{\"name\":\""+oname+"\",\"path\":\"objects/"+oname+"/"+oname+".yy\",},\"inheritCode\":false,\"hasCreationCode\":true,\"colour\":4294967295,\"rotation\":0.0,\"scaleX\":1.0,\"scaleY\":1.0,\"imageIndex\":0,\"imageSpeed\":1.0,\"inheritedItemId\":null,\"frozen\":false,\"ignore\":false,\"inheritItemSettings\":false,\"x\":48.0,\"y\":80.0,\"resourceVersion\":\"1.0\",\"name\":\""+myname+"\",\"tags\":[],\"resourceType\":\"GMRInstance\",},\n");
+			if object_index == o_trigger {
+			file_text_write_string(dude, "{\"properties\":[],\"isDnd\":false,\"objectId\":{\"name\":\""+oname+"\",\"path\":\"objects/"+oname+"/"+oname+".yy\",},\"inheritCode\":false,\"hasCreationCode\":true,\"colour\":4294967295,\"rotation\":0.0,\"scaleX\":"+st(x2-x)+".0,\"scaleY\":"+st(y2-y)+".0,\"imageIndex\":0,\"imageSpeed\":1.0,\"inheritedItemId\":null,\"frozen\":false,\"ignore\":false,\"inheritItemSettings\":false,\"x\":"+st(x)+".0,\"y\":"+st(y)+".0,\"resourceVersion\":\"1.0\",\"name\":\""+myname+"\",\"tags\":[],\"resourceType\":\"GMRInstance\",},\n");
+			} else {
+				file_text_write_string(dude, "{\"properties\":[],\"isDnd\":false,\"objectId\":{\"name\":\""+oname+"\",\"path\":\"objects/"+oname+"/"+oname+".yy\",},\"inheritCode\":false,\"hasCreationCode\":true,\"colour\":4294967295,\"rotation\":0.0,\"scaleX\":1.0,\"scaleY\":1.0,\"imageIndex\":0,\"imageSpeed\":1.0,\"inheritedItemId\":null,\"frozen\":false,\"ignore\":false,\"inheritItemSettings\":false,\"x\":"+st(x)+".0,\"y\":"+st(y)+".0,\"resourceVersion\":\"1.0\",\"name\":\""+myname+"\",\"tags\":[],\"resourceType\":\"GMRInstance\",},\n");
+			}
 		}
 	}
 	log("done instances");
@@ -36,7 +41,7 @@ function c_saveroom(name) {
 			switch object_index {
 				case o_solid:
 					file_text_write_string(guy, @"
-						c_maketile("+st(x)+", "+st(y)+", tl[$"+type.name+@"])
+						c_maketile("+st(x)+", "+st(y)+", tl[$\""+type.name+"\""+@"])
 						instance_destroy();
 					");
 					break;
