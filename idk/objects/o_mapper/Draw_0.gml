@@ -8,5 +8,13 @@ for (i=-global.tilesize/2; i<room_width; i+=global.tilesize) {
 for (i=-global.tilesize/2; i<room_height; i+=global.tilesize) {
 	draw_line(0, i, room_width, i);
 }
-draw_sprite(tl[$datas[selecteddata]].sprite, 0, 20, 40)
+switch selectedtype {
+	case 0:
+		draw_sprite(tl[$datas[selectedtype][selecteddata]].sprite, 0, 20, 40);
+		break;
+	case 1:
+		//log(mp[datas[selectedtype][selecteddata]])
+		draw_text(20, 40, mp[datas[selectedtype][selecteddata]].name);
+		break;
+}
 draw_set_alpha(1);

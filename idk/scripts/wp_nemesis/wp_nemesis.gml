@@ -1,6 +1,7 @@
 weapongen({
 	step: function(input) {
-		if input.hit {
+		c
+		if input.hold && ncm(5) {
 			c_shoot(df.x, df.y, 9, df.dir, bul.big, c_blue, function() {
 				c
 				color = make_color_hsv((count*21)%255, 255, 255);
@@ -9,4 +10,5 @@ weapongen({
 		}
 	},
 	name: "nemesis",
+	count: 0,
 });

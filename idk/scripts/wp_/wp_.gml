@@ -3,4 +3,5 @@ weapongen({
 		
 	},
 	name: "namesis",
+	count: 0,
 });

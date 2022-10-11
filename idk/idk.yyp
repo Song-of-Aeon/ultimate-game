@@ -132,6 +132,7 @@
     {"id":{"name":"sm_null","path":"scripts/sm_null/sm_null.yy",},"order":0,},
     {"id":{"name":"s_bulletsquare","path":"sprites/s_bulletsquare/s_bulletsquare.yy",},"order":17,},
     {"id":{"name":"s_bulletsquarecc","path":"sprites/s_bulletsquarecc/s_bulletsquarecc.yy",},"order":18,},
+    {"id":{"name":"array_get_indeces","path":"scripts/array_get_indeces/array_get_indeces.yy",},"order":22,},
     {"id":{"name":"s_bul","path":"sprites/s_bul/s_bul.yy",},"order":0,},
     {"id":{"name":"c_maketile","path":"scripts/c_maketile/c_maketile.yy",},"order":25,},
     {"id":{"name":"draw_outline","path":"scripts/draw_outline/draw_outline.yy",},"order":3,},
@@ -203,8 +204,8 @@
     "children": [],
   },
   "RoomOrderNodes": [
-    {"roomId":{"name":"sky_corridor","path":"rooms/sky_corridor/sky_corridor.yy",},},
     {"roomId":{"name":"makeroomroom","path":"rooms/makeroomroom/makeroomroom.yy",},},
+    {"roomId":{"name":"sky_corridor","path":"rooms/sky_corridor/sky_corridor.yy",},},
     {"roomId":{"name":"template","path":"rooms/template/template.yy",},},
     {"roomId":{"name":"gusty_space","path":"rooms/gusty_space/gusty_space.yy",},},
     {"roomId":{"name":"rm_test_persistance","path":"rooms/rm_test_persistance/rm_test_persistance.yy",},},

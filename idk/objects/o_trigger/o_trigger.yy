@@ -1,5 +1,8 @@
 {
-  "spriteId": null,
+  "spriteId": {
+    "name": "s_when_im",
+    "path": "sprites/s_when_im/s_when_im.yy",
+  },
   "solid": false,
   "visible": true,
   "spriteMaskId": null,
