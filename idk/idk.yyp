@@ -16,6 +16,7 @@
     {"id":{"name":"imguigml_wrapper_widget","path":"scripts/imguigml_wrapper_widget/imguigml_wrapper_widget.yy",},"order":4,},
     {"id":{"name":"c_drawinput","path":"scripts/c_drawinput/c_drawinput.yy",},"order":9,},
     {"id":{"name":"textline_next","path":"scripts/textline_next/textline_next.yy",},"order":8,},
+    {"id":{"name":"st","path":"scripts/st/st.yy",},"order":22,},
     {"id":{"name":"song","path":"scripts/song/song.yy",},"order":4,},
     {"id":{"name":"utils","path":"scripts/utils/utils.yy",},"order":21,},
     {"id":{"name":"c_null","path":"scripts/c_null/c_null.yy",},"order":0,},
