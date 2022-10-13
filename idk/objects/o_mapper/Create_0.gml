@@ -12,7 +12,12 @@ typing = true;
 
 
 datas[0] = [variable_struct_get_names(tl), ["funny", "unfunny"]];
-datas[1] = [array_get_indeces(mp), [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]];
+datas[1] = [array_get_indeces(mp), [], []];
+var i;
+for (i=0; i<100; i++) {
+	array_push(datas[1][1], i);
+	array_push(datas[1][2], i);
+}
 
 selector = [
 	array_create(99),

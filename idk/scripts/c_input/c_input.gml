@@ -12,15 +12,16 @@ function c_input() {
 }
 
 function c_inputload() {
-	nu kinput("left", [vk_left]);
-	nu kinput("down", [vk_down]);
-	nu kinput("up", [vk_up]);
-	nu kinput("right", [vk_right]);
+	nu kinput("left", ["A", vk_left]);
+	nu kinput("down", ["S", vk_down]);
+	nu kinput("up", ["W", vk_up]);
+	nu kinput("right", ["D", vk_right]);
 	
-	nu kinput("jump", ["S", mb_right]);
-	nu kinput("attack", ["A", mb_left]);
-	nu kinput("lock", ["D"]);
+	nu kinput("jump", ["Z", mb_right]);
+	nu kinput("attack", ["X", mb_left]);
+	nu kinput("lock", ["C", "R"]);
 	nu kinput("debug", ["Q"]);
+	nu kinput("shift", [vk_shift]);
 }
 
 function kinput(name_, keys_) constructor {

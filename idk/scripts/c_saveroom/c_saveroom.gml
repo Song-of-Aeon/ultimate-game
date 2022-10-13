@@ -45,7 +45,7 @@ instance_destroy();");
 					break;
 				case o_trigger:
 					file_text_write_string(guy, @"c_maketrigger("+st(x)+", "+st(y)+", "+st(x2)+", "+st(y2)+@", function() {
-	c_mapchange(mp["+st(target)+"], "+st(10 tiles)+", "+st(10 tiles)+@");
+	c_mapchange(mp["+st(target)+"], "+st(targetx)+", "+st(targety)+@");
 })
 instance_destroy();");
 					break;

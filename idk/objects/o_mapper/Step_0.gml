@@ -50,12 +50,14 @@ if !typing {
 			if attack.hit {
 				//mydude = instance_create(mouse_x, mouse_y, o_trigger);
 				mydude = c_maketrigger(mouse_x, mouse_y, mouse_x, mouse_y);
-				mydude.target = mp[datas[selectedtype][selecteddata][selector[selectedtype][selecteddata]]].maproom;
+				mydude.target = mp[datas[selectedtype][0][selector[selectedtype][0]]].maproom;
+				mydude.targetx = datas[selectedtype][1][selector[selectedtype][1]];
+				mydude.targety = datas[selectedtype][2][selector[selectedtype][2]];
 				c_tilequantize(mydude, -8, -8);
 			}
 			if attack.hold {
-				mydude.x2 = c_tilequantizeval(mouse_x, -8, -8);
-				mydude.y2 = c_tilequantizeval(mouse_y);
+				mydude.x2 = c_tilequantizeval(mouse_x, -8);
+				mydude.y2 = c_tilequantizeval(mouse_y, -8);
 			}
 			if jump.hold {
 				var dude = collision_point(c_tilequantizeval(mouse_x), c_tilequantizeval(mouse_y), o_trigger, false, false);
@@ -84,7 +86,7 @@ if typing {
 } else {
 	selecteddata = mod_negative(selecteddata+down.hit-up.hit, array_length(datas[selectedtype]));
 	selector[selectedtype][selecteddata] = mod_negative(
-		selector[selectedtype][selecteddata]+right.hit-left.hit,
+		selector[selectedtype][selecteddata]+(right.hit-left.hit)*(1+shift.hold*4),
 		array_length(datas[selectedtype][selecteddata])
 	);
 }

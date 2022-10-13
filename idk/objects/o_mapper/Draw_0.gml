@@ -19,14 +19,12 @@ var i;
 for (i=0; i<array_length(datas[selectedtype]); i++) {
 	draw_set_alpha(.4+(i == selecteddata && !typing)*.6);
 	if selectedtype == 1 && i == 0 {
-		draw_text(10, 25+i*15, mp[datas[selectedtype][selecteddata][selector[selectedtype][selecteddata]]].name);
+		draw_text(10, 25+i*15, mp[datas[selectedtype][i][selector[selectedtype][i]]].name);
 	} else {
 		draw_text(10, 25+i*15, datas[selectedtype][i][selector[selectedtype][i]]);
 	}
 }
 
-draw_set_halign(fa_right);
-draw_set_halign(fa_left);
 draw_set_alpha(.4);
 for (i=-global.tilesize/2; i<room_width; i+=global.tilesize) {
 	draw_line(i, 0, i, room_height);
@@ -35,3 +33,8 @@ for (i=-global.tilesize/2; i<room_height; i+=global.tilesize) {
 	draw_line(0, i, room_width, i);
 }
 draw_set_alpha(1);
+
+draw_set_halign(fa_right);
+//draw_text(WIDTH-10, HEIGHT-20, st(c_tilequantizeval(mouse_x, -8)/global.tilesize+.5) + ", " + st(c_tilequantizeval(mouse_y, -8)/global.tilesize+.5));
+window_set_caption(st(c_tilequantizeval(mouse_x, -8)/global.tilesize+.5) + ", " + st(c_tilequantizeval(mouse_y, -8)/global.tilesize+.5));
+draw_set_halign(fa_left);
