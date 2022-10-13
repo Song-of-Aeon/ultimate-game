@@ -40,18 +40,14 @@ function c_saveroom(name) {
 			var guy = file_text_open_write("InstanceCreationCode_"+myname+".gml");
 			switch object_index {
 				case o_solid:
-					file_text_write_string(guy, @"
-						c_maketile("+st(x)+", "+st(y)+", tl[$\""+type.name+"\""+@"])
-						instance_destroy();
-					");
+					file_text_write_string(guy, @"c_maketile("+st(x)+", "+st(y)+", tl[$\""+type.name+"\""+@"])
+instance_destroy();");
 					break;
 				case o_trigger:
-					file_text_write_string(guy, @"
-						c_maketrigger("+st(x)+", "+st(y)+", "+st(x2)+", "+st(y2)+@", function() {
-							c_mapchange(mp["+st(target)+"], "+st(10 tiles)+", "+st(10 tiles)+@");
-						})
-						instance_destroy();
-					");
+					file_text_write_string(guy, @"c_maketrigger("+st(x)+", "+st(y)+", "+st(x2)+", "+st(y2)+@", function() {
+	c_mapchange(mp["+st(target)+"], "+st(10 tiles)+", "+st(10 tiles)+@");
+})
+instance_destroy();");
 					break;
 			}
 			file_text_close(guy);

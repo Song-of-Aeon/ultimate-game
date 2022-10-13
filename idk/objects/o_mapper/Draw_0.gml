@@ -1,13 +1,6 @@
-draw_set_color(c_white);
-draw_text(10, 10, object_get_name(types[selectedtype]));
+/*draw_set_color(c_white);
+draw_text(10, 10, object_get_name(types[selector[0]]));
 var i;
-draw_set_alpha(.4);
-for (i=-global.tilesize/2; i<room_width; i+=global.tilesize) {
-	draw_line(i, 0, i, room_height);
-}
-for (i=-global.tilesize/2; i<room_height; i+=global.tilesize) {
-	draw_line(0, i, room_width, i);
-}
 switch selectedtype {
 	case 0:
 		draw_sprite(tl[$datas[selectedtype][selecteddata]].sprite, 0, 20, 40);
@@ -16,5 +9,29 @@ switch selectedtype {
 		//log(mp[datas[selectedtype][selecteddata]])
 		draw_text(20, 40, mp[datas[selectedtype][selecteddata]].name);
 		break;
+}
+draw_set_alpha(1);
+*/
+
+//draw_text(10, 10, object_get_name(types[selectedtype]));
+draw_text(10, 10, types[selectedtype]);
+var i;
+for (i=0; i<array_length(datas[selectedtype]); i++) {
+	draw_set_alpha(.4+(i == selecteddata && !typing)*.6);
+	if selectedtype == 1 && i == 0 {
+		draw_text(10, 25+i*15, mp[datas[selectedtype][selecteddata][selector[selectedtype][selecteddata]]].name);
+	} else {
+		draw_text(10, 25+i*15, datas[selectedtype][i][selector[selectedtype][i]]);
+	}
+}
+
+draw_set_halign(fa_right);
+draw_set_halign(fa_left);
+draw_set_alpha(.4);
+for (i=-global.tilesize/2; i<room_width; i+=global.tilesize) {
+	draw_line(i, 0, i, room_height);
+}
+for (i=-global.tilesize/2; i<room_height; i+=global.tilesize) {
+	draw_line(0, i, room_width, i);
 }
 draw_set_alpha(1);
