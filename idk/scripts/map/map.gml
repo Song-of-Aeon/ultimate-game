@@ -7,7 +7,7 @@ function map(name_, room_, step_=c_null, draw_=c_null) constructor {
 }
 
 global.maps = [];
-nu map("Sky Corridor", sky_corridor);
-nu map("Gusty Space", gusty_space);
+nu map("Moon Start", moon1);
+nu map("Moon Path", moon2);
 
 #macro mp global.maps

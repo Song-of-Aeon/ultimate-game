@@ -91,14 +91,14 @@ if !typing {
 			}
 			break;
 		case 4:
-			room_goto(mp[sky_corridor].maproom);
+			room_goto(mp[moon1].maproom);
 			instance_destroy();
 			break;
 	}
 
 	if debug.hit {
-		/*c_saveroom(get_string("", ""));
-		log("did it");*/
+		c_saveroom(get_string("", ""));
+		log("did it");
 		
 	}
 }
