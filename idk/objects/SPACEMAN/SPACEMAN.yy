@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "s_when_im",
-    "path": "sprites/s_when_im/s_when_im.yy",
+    "name": "s_paceman",
+    "path": "sprites/s_paceman/s_paceman.yy",
   },
   "solid": false,
   "visible": true,
@@ -32,7 +32,7 @@
     "path": "folders/Objects.yy",
   },
   "resourceVersion": "1.0",
-  "name": "DEFINE",
+  "name": "SPACEMAN",
   "tags": [],
   "resourceType": "GMObject",
 }

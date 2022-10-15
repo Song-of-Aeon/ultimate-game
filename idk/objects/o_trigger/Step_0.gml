@@ -1,5 +1,5 @@
 step();
-var dude = collision_rectangle(x, y, x2, y2, DEFINE, true, false);
+var dude = collision_rectangle(x, y, x2, y2, SPACEMAN, true, false);
 if dude {
 	if !active enter();
 	active = true;

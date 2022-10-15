@@ -8,5 +8,5 @@ nu bullet("core", s_bulcore, 1, true, false, true, 1);
 nu bullet("card", s_bulcard, 1, true, false, true, 1);
 nu bullet("cross", s_bulcross, 1, true, false, true, 1);
 nu bullet("thin", s_bulthin, 1, true, false, true, 1);
-nu bullet("big", s_bulbig, 1, true, false, true, 1);
+nu bullet("big", s_bulbig, 1, true, true, true, 1);
 nu bullet("star", s_bulstar, 1, true, false, true, 1, u, false);
