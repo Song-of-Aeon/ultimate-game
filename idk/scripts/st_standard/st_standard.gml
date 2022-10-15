@@ -11,7 +11,8 @@ function st_standard() {
 	}
 	
 	if debug.hit {
-		textbox_create(txt_test);
+		//textbox_create(txt_test);
+		c_spawnenemy(10 tiles, 10 tiles, en.impostor);
 	}
 	
     hput = right.hold-left.hold;
