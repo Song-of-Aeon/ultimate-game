@@ -14,7 +14,7 @@ function st_standard() {
 		//textbox_create(txt_test);
 		c_spawnenemy(10 tiles, 10 tiles, en.impostor);
 	}
-	hput = right.hit-left.hit;
+	hput = right.hold-left.hold;
 	
 	c_dosprites();
 	

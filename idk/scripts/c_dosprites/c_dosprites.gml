@@ -1,22 +1,19 @@
 function c_dosprites() {
-	/*if aerial {
+	if aerial {
+		//image_speed = spd.v/2;
 		image_speed = 0;
-		sprite_index = up.hold ? sprites.upwalk : sprites.walk;
-		if down.hold image_index = sprites.down;
+		sprite_index = spd.v ? sprites.fall : sprites.rise;
 		if hput != 0 {
-			image_xscale = -hput;
+			image_xscale = hput;
 		}
-		image_index = !spd.v;
 	} else {
 		if hput != 0 {
-			
-			sprite_index = up.hold ? sprites.upwalk : sprites.walk;
-			image_speed = spd.h/6;
+			image_xscale = hput;
+			sprite_index = sprites.walk;
+			image_speed = spd.h/1.5;
 		} else {
-			sprite_index = up.hold ? sprites.up : sprites.idle;
+			sprite_index = sprites.idle;
+			image_speed = .4;
 		}
-	}*/
-	if hput != 0 {
-		image_xscale = hput;
 	}
 }

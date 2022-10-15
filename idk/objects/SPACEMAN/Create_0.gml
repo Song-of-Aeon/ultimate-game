@@ -15,8 +15,17 @@ espd = {
 weapons = [
 	wp.nemesis,
 ]
+
+sprites = {
+	idle: s_paceman,
+	walk: s_pacemanwalk,
+	rise: s_pacemanrise,
+	fall: s_pacemanfall,
+}
+
 eqwp = 0;
 
+aerial = false;
 walkspeed = 1.9;
 jumpspeed = 3.2;
 grav = .1;
@@ -32,3 +41,10 @@ ydraw = 310;
 global.me = id;
 #macro df global.me
 instance_create(0, 0, o_mapmanager);
+
+global.scores = {
+	progression: 0,
+	ammo: 0,
+	time: 10000,
+	damage: 10000,
+}
