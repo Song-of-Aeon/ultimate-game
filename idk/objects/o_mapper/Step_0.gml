@@ -87,7 +87,7 @@ if !typing {
 				x = 160;
 				y = 120;
 				typing = !typing;
-				instance_destroy(DEFINE);
+				instance_destroy(SPACEMAN);
 			}
 			break;
 		case 4:
