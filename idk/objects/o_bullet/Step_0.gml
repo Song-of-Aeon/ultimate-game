@@ -12,8 +12,8 @@ spd += acc;
 //var yold = y;
 direction = dir;
 speed = spd;
-x += hspd;
-y += vspd;
+//x += spd.h;
+//y += spd.v;
 //var time = get_timer();
 //image_angle = point_direction(xprevious, yprevious, x, y)-90;
 //log(image_angle);
@@ -24,4 +24,4 @@ if !(x==clamp(x, -escapedistance, room_width+escapedistance) && y==clamp(y, -esc
 //image_angle = point_direction(xprevious, yprevious, x, y)-90;
 //log(get_timer()-time);
 
-//image_alpha = clamp(image_alpha+((abs(hspd)+abs(vspd))/2+speed+.05)/10, 0, alpha);
+//image_alpha = clamp(image_alpha+((abs(spd.h)+abs(spd.v))/2+speed+.05)/10, 0, alpha);

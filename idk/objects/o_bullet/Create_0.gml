@@ -4,8 +4,8 @@ dir = 0;
 image_angle = dir - 90;
 spd = 0;
 tspd = 0; //turnspeed
-hspd = 0;
-vspd = 0;
+//spd.h = 0;
+//spd.v = 0;
 dspd = 0;
 acc = 0;
 count = 0;
@@ -31,7 +31,7 @@ intangible = false;
 despawn = c_null;
 escapedistance = 50;
 designed = false;
-addvspd = 0;
+//addspd.v = 0;
 color = c_white;
 
 event_perform_object(self,ev_step,0);

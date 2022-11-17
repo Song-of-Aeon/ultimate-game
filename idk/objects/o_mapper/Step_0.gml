@@ -31,8 +31,8 @@ switch selector[0] {
 if jump.hold {
 	roomsize.x = selector[2][0] tiles;
 	roomsize.y = selector[2][1] tiles;
-	x = clamp(x+(mouse_x-mousepos.x)/2, 160, roomsize.x-160);
-	y = clamp(y+(mouse_y-mousepos.y)/2, 120, roomsize.y-120);
+	x = clamp(x+(mouse_x-mousepos.x), 160, roomsize.x-160);
+	y = clamp(y+(mouse_y-mousepos.y), 120, roomsize.y-120);
 	mousepos.x = mouse_x;
 	mousepos.y = mouse_y;
 	//x += 2;
@@ -87,11 +87,14 @@ if !typing {
 				x = 160;
 				y = 120;
 				typing = !typing;
-				instance_destroy(SPACEMAN);
+				instance_destroy(DEFINE);
 			}
 			break;
 		case 4:
-			room_goto(mp[moon1].maproom);
+			//room_goto(mp[sky_corridor].maproom);
+			//room_goto(mp[coinroom].maproom);
+			room_goto(moon1);
+			o_mapmanager.currentmap = moon1;
 			instance_destroy();
 			break;
 	}
@@ -99,7 +102,6 @@ if !typing {
 	if debug.hit {
 		c_saveroom(get_string("", ""));
 		log("did it");
-		
 	}
 }
 

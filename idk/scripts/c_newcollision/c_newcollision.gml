@@ -1,5 +1,5 @@
 function c_newcollision(){
-    //var xmeeting = collision_rectangle(bbox_left+hspd,bbox_top,floor(bbox_right+hspd),bbox_bottom,o_solid,false,false)
+    //var xmeeting = collision_rectangle(bbox_left+spd.h,bbox_top,floor(bbox_right+spd.h),bbox_bottom,o_solid,false,false)
     var a = {bbox_left: bbox_left+spd.h,
         bbox_top:bbox_top+2,
         bbox_right: bbox_right+spd.h,
@@ -26,8 +26,8 @@ function c_newcollision(){
         
         spd.h = 0;
     }
-    //var ymeeting = collision_rectangle(bbox_left,ceil(bbox_top+vspd),bbox_right,ceil(bbox_bottom+vspd),o_solid,false,false);
-    //var ymeeting = place_meeting(x,y+vspd,o_solid);
+    //var ymeeting = collision_rectangle(bbox_left,ceil(bbox_top+spd.v),bbox_right,ceil(bbox_bottom+spd.v),o_solid,false,false);
+    //var ymeeting = place_meeting(x,y+spd.v,o_solid);
 	var b = {bbox_left: bbox_left,
         bbox_top:bbox_top+spd.v,
         bbox_right: bbox_right,

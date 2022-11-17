@@ -8,15 +8,15 @@ function distabs(dir, distance) {
 	bitch.direction = dir;
 	with bitch {
 		dir2hv(direction, speed);
-		x += hspd;
-		y += vspd;
+		x += spd.h;
+		y += spd.v;
 	}
 	dist.x = bitch.x;
 	dist.y = bitch.y;
 	instance_destroy(bitch);*/
-	//log(distance, hspd, vspd);
-	//hspd = 0;
-	//vspd = 0;
+	//log(distance, spd.h, spd.v);
+	//spd.h = 0;
+	//spd.v = 0;
 	
 	
 	return dist;

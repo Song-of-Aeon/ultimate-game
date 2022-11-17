@@ -1,8 +1,8 @@
 //c_inputload();
 
-hspd = 0;
+spd.h = 0;
 count = 0;
-vspd = 0;
+spd.v = 0;
 c_input();
 jspd = 5.4;
 state = st_standard;

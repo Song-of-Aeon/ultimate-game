@@ -13,7 +13,7 @@ espd = {
 }
 //log(global.weapons)
 weapons = [
-	wp.nemesis,
+	wp.shotgun,
 ]
 
 sprites = {
@@ -45,6 +45,7 @@ instance_create(0, 0, o_mapmanager);
 global.scores = {
 	progression: 0,
 	ammo: 0,
+	kills: 0,
 	time: 10000,
 	damage: 10000,
 }
