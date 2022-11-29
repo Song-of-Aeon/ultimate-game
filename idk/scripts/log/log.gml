@@ -9,6 +9,7 @@ function log() {
 	show_debug_message(string(current_time) + " : " + string(stack[1]) + " : " + r);
 	//var p = new consoleEntry(r,c_black);
 }
+
 /*
 var a = {};
 for(var i = 0; i < 24; i++){

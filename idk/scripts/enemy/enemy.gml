@@ -17,7 +17,14 @@ function c_spawnenemy(x, y, archetype) {
 	return chump;
 }
 
-nu enemy("impostor", s_when_im, 16);
+nu enemy("turret", s_when_im, 16, function() {
+	if !collision_line(x, y, df.x, df.y, o_solid, false, false) {
+		c
+		if ncm(90) {
+		
+		}
+	} else count = 0;
+});
 
 //everybody wants to be
 //my enemy

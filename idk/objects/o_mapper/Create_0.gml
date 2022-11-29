@@ -2,8 +2,8 @@ instance_create(0, 0, o_mapmanager);
 selectionzone = 0;
 selectedtype = 0;
 selecteddata = 0;
-x = 160;
-y = 120;
+x = 320;
+y = 240;
 
 //datas = [[variable_struct_get_names(tl)], [array_get_indeces(mp)]];
 
@@ -28,11 +28,11 @@ for (i=0; i<100; i++) {
 }
 
 selector = [
-	array_create(99),
-	array_create(99),
-	array_create(99),
-	array_create(99),
-	array_create(99),
+	array_create(999),
+	array_create(999),
+	array_create(999),
+	array_create(999),
+	array_create(999),
 ]
 
 selector[2][0] = 320/(1 tiles);

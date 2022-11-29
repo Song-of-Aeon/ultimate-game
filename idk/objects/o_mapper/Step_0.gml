@@ -28,11 +28,11 @@ switch selector[0] {
 }
 */
 
+roomsize.x = selector[2][0] tiles;
+roomsize.y = selector[2][1] tiles;
 if jump.hold {
-	roomsize.x = selector[2][0] tiles;
-	roomsize.y = selector[2][1] tiles;
-	x = clamp(x+(mouse_x-mousepos.x), 160, roomsize.x-160);
-	y = clamp(y+(mouse_y-mousepos.y), 120, roomsize.y-120);
+	x = clamp(x+(mouse_x-mousepos.x), 320, roomsize.x-240);
+	y = clamp(y+(mouse_y-mousepos.y), 320, roomsize.y-240);
 	mousepos.x = mouse_x;
 	mousepos.y = mouse_y;
 	//x += 2;
@@ -82,8 +82,8 @@ if !typing {
 		case 3:
 			if attack.hit {
 				room_goto(mp[datas[selectedtype][0][selector[selectedtype][0]]].maproom);
-				selector[2][0] = room_width/(1 tiles);
-				selector[2][1] = room_height/(1 tiles);
+				//selector[2][0] = room_width/(1 tiles);
+				//selector[2][1] = room_height/(1 tiles);
 				x = 160;
 				y = 120;
 				typing = !typing;
